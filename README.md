@@ -1,2 +1,21 @@
-# SPA-Template
-SPA Template - all in one html-file - VITE
+# sfa
+
+To install dependencies:
+
+```bash
+bun install
+```
+
+To run dev mode:
+
+```bash
+bun run dev
+```
+
+To run build:
+
+```bash
+bun run build
+```
+
+This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.

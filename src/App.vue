@@ -1,9 +1,28 @@
 <template>
   <v-app>
-    <v-main class="d-flex align-center justify-center bg-grey-lighten-4">
+    <app-header />
+
+    <v-main theme="light" class="bg-grey-lighten-4">
+      <v-container>
+        <slot />
+      </v-container>
+    </v-main>
+
+    <app-footer />
+  </v-app>
+</template>
+
+<script setup>
+import { useCounterStore } from './stores/counter';
+
+const counter = useCounterStore();
+</script>
+
+<!--
+
+<v-main class="d-flex align-center justify-center bg-grey-lighten-4">
       <v-card width="400" class="pa-5 text-center" elevation="2">
         
-        <!-- Eingebettetes SVG Icon -->
         <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="64" height="64" class="mx-auto mb-4" fill="currentColor">
           <path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/>
         </svg>
@@ -17,12 +36,5 @@
           </v-btn>
         </v-card-actions>
       </v-card>
-    </v-main>
-  </v-app>
-</template>
-
-<script setup>
-import { useCounterStore } from './stores/counter';
-
-const counter = useCounterStore();
-</script>
+</v-main>
+-->

@@ -12,8 +12,8 @@
         <v-card-text>Gebaut mit Bun, Vue 3 und Vuetify.</v-card-text>
         
         <v-card-actions>
-          <v-btn color="primary" block @click="count++">
-            Klicks: {{ count }}
+          <v-btn color="primary" block @click="counter.increment">
+            Klicks: {{ counter.count }}
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -22,6 +22,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-const count = ref(0);
+import { useCounterStore } from './stores/counter';
+
+const counter = useCounterStore();
 </script>
